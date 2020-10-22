@@ -1,5 +1,5 @@
 def line_counter(file_name):
-    with open(get, 'r') as file:
+    with open(file_name, 'r') as file:
         count = 0
         large_comment = False
         for line in file:
@@ -23,7 +23,6 @@ def line_counter(file_name):
                         large_comment = False
                     elif large_comment == False:
                         large_comment = True
-                    print(large_comment)
                     continue
 
             if large_comment == False:
@@ -38,6 +37,6 @@ try:
     print("#single line comments\n")
     print("\nand whitespace.\n")
     get = input("Type python file name: ")
-    print(line_counter(get))
+    print("{} has {} lines!".format(get, line_counter(get)))
 except FileNotFoundError:
     print("Couldn't find file: \"{}\"".format(get))
