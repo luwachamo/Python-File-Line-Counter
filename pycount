@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import sys
 
 def line_counter(file_name):
